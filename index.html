@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Kamil Shaikha</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/20ce087b13.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="jquery.scrollTo.min.js"></script>
+    <script>
+		
+		jQuery(function($)
+		{
+			
+			$.scrollTo(0);
+			
+            $('#scrollToBody').click(function() { $.scrollTo($('body'), 1500); });
+			$('#scrollAbout').click(function() { $.scrollTo($('#about'), 500); });
+			$('#scrollSkills').click(function() { $.scrollTo($('.fa-chevron-right'), 500); });
+			$('#scrollProjects').click(function() { $.scrollTo($('#projects'), 500); });
+			$('#scrollContact').click(function() { $.scrollTo($('#contact'), 500); });
+	
+			$('.scrollup').click(function() { $.scrollTo($('body'), 1000); });		}
+            
+		);
+
+        $(window).scroll(function()
+		{
+			if($(this).scrollTop()>300) $('.scrollup').fadeIn();
+			else $('.scrollup').fadeOut();		
+		}
+		);
+
+
+
+    
+	</script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="content">
+                <div class="logo">
+                    <a href="index.html"><img src="img/logo.png"></a>
+                </div>
+                <ul class="menu-list">
+                    <div class="icon cancel-btn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                        <li id="HomePL"><a href="index.html" class="aHover" id="scrollToBody"></i>Strona główna</a></li>
+                        <li id="AboutPL"><a href="#about" class="aHover" id="scrollAbout">O mnie</a></li>
+                        <li id="SkillsPL"><a href="#skills" class="aHover" id="scrollSkills">Umiejętności</a></li>
+                        <li id="ProjectsPL"><a href="#projects" class="aHover" id="scrollProjects">Projekty</a></li>
+                        <li id="ContactPL"><a href="#contact" class="aHover" id="scrollContact" style="margin-right: 20px;">Kontakt</a></li>
+                        <li id="HomeENG" style="display: none;"><a href="index.html" class="aHover" id="scrollToBody"></i>Home</a></li>
+                        <li id="AboutENG" style="display: none;"><a href="#about" class="aHover" id="scrollAbout">About</a></li>
+                        <li id="SkillsENG" style="display: none;"><a href="#skills" class="aHover" id="scrollSkills">Skills</a></li>
+                        <li id="ProjectsENG" style="display: none;"><a href="#projects" class="aHover" id="scrollProjects">Projects</a></li>
+                        <li id="ContactENG" style="display: none;"><a href="#contact" class="aHover" id="scrollContact" style="margin-right: 20px;">Contact</a></li>
+                    <div id="languages">
+                        <span class="polish"><img src="img/poland.png" style="width: 20px; height: 15px;"></span>
+                        <input type="checkbox" id="check">
+                        <span class="english" style="margin-top: 5px; margin-left: 5px"><img src="img/england.png" style="width: 20px; height: 15px;"></span>
+                    </div>
+                </ul>
+                <div class="icon menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+        <div id="headers">
+            <h1>Kamil Shaikha</h1>
+            <div class="dataText">
+                <h2 data-text="Frontend" class="animatedTextOne">Frontend</h2>
+                <h2 data-text="Developer" class="animatedTextTwo">Developer</h2>
+            </div>
+            <div class="buttons" id="buttonsPL">
+                <button class="buttonContact"><a href="#contact">Kontakt</a></button>
+                <button class="buttonCV"><a href="img/Kamil_Shaikha_CV.pdf" download>Pobierz CV</a></button>
+            </div>
+            <div class="buttons" id="buttonsENG" style="display: none;">
+                <button class="buttonContact"><a href="#contact">Contact</a></button>
+                <button class="buttonCV"><a href="img/Kamil_Shaikha_CV.pdf" download>Download CV</a></button>
+            </div>
+        </div>
+    </header >
+
+    <div class="scrollup"><i class="fas fa-arrow-circle-up"></i></div>
+
+    <section id="sideSocials">
+        <ul>
+            <li><a href="https://www.facebook.com/kamil.shaikha.37/"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+            <li><a href="https://github.com/KamilSh98"><i class="fab fa-github"></i><span>Github</span></a></li>
+            <li><a href="https://www.linkedin.com/in/kamil-shaikha-b3028a228/"><i class="fab fa-linkedin-in"></i><span >Linkedin</span></a></li>
+         </ul>
+    </section>
+
+    <section id="about">
+        <div class="aboutLeftSide">
+            <h3 data-aos="fade-right" id="h3AboutMePL">"Koduję, więc jestem..."</h3>
+            <p data-aos="fade-right" id="textAboutMePL"> Jestem studentem IV roku zarządzania i inżynierii produkcji na Politechnice Rzeszowskiej. W wolnych
+                chwilach staram się rozwijać umiejętności z dziedziny programowania, aby
+                w najbliższej przyszłości móc zostać frontend developerem. Moim hobby jest sportowy tryb życia, a w szczególności
+                gra w piłkę nożną oraz siłownia.
+            </p>
+            <h3 data-aos="fade-right" id="h3AboutMeENG" style="display: none;">"I code, therefore I am..."</h3>
+            <p data-aos="fade-right" id="textAboutMeENG" style="display: none;"> I am a fourth-year student of Management and Production Engineering at the Rzeszów University of Technology. 
+                In my free time, I try to develop my skills in programming in order to become a frontend developer in the near future. 
+                My hobby is sport lifestyle, especially football and gym.
+            </p>
+        </div>
+        <div class="aboutRightSide" data-aos="fade-left"></div>
+    </section>
+
+    <section id="goTo">
+        <div id="goToSize">
+            <div class="goToSkills"  id="goToSkillsPL">
+                <div class="goToBG" data-aos="fade-down">
+                    <i class="fas fa-code" ></i>
+                </div> 
+                <h4 data-aos="fade-down">Umiejętności</h4>
+                <p data-aos="fade-down">Dowiedz się wiecej o moich umiejętnościach programowania.</p>
+                <a href="#skills"><p data-aos="fade-down">Kliknij, po więcej... <i class="fas fa-chevron-right"></i></p></a>
+            </div>
+            <div class="goToSkills" id="goToSkillsENG" style="display: none;">
+                <div class="goToBG" data-aos="fade-down">
+                    <i class="fas fa-code" ></i>
+                </div> 
+                <h4 data-aos="fade-down">Skills</h4>
+                <p data-aos="fade-down">Find out more about my programming skills.</p>
+                <a href="#skills"><p data-aos="fade-down">Click here for more... <i class="fas fa-chevron-right"></i></p></a>
+            </div>
+            <div class="goToProjects" id="goToProjectsPL">
+                <div class="goToBG" data-aos="fade-down">
+                <i class="fas fa-tasks"></i>
+                </div>
+                <h4 data-aos="fade-down">Projekty</h4>
+                <p data-aos="fade-down">Sprawdź moje prace wykonane w ostatnim czasie.</p>
+                <a href="#projects"><p data-aos="fade-down">Kliknij, po więcej... <i class="fas fa-chevron-right"></i></p></a>
+            </div>
+            <div class="goToProjects" style="display: none;" id="goToProjectsENG">
+                <div class="goToBG" data-aos="fade-down">
+                <i class="fas fa-tasks"></i>
+                </div>
+                <h4 data-aos="fade-down">Projects</h4>
+                <p data-aos="fade-down">Check out my recent works.</p>
+                <a href="#projects"><p data-aos="fade-down">Click here for more...<i class="fas fa-chevron-right"></i></p></a>
+            </div>
+            <div class="goToContact" id="goToContactPL">
+                <div class="goToBG" data-aos="fade-down">
+                <i class="fas fa-mail-bulk"></i>
+                </div>
+                <h4 data-aos="fade-down">Kontakt</h4>
+                <p data-aos="fade-down">Skontaktuj się ze mną w celu podjęcia współpracy lub zadania pytania.</p>
+                <a href="#contact"><p data-aos="fade-down">Kliknij, po więcej... <i class="fas fa-chevron-right"></i></p></a>
+            </div>
+            <div class="goToContact" style="display: none;" id="goToContactENG">
+                <div class="goToBG" data-aos="fade-down">
+                <i class="fas fa-mail-bulk"></i>
+                </div>
+                <h4 data-aos="fade-down">Contact</h4>
+                <p data-aos="fade-down">Contact me for collaboration or to ask a question using the form.</p>
+                <a href="#contact"><p data-aos="fade-down">Click here for more... <i class="fas fa-chevron-right"></i></p></a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="skills">
+        <div class="skillsSide">
+            <div class="skillsLine" id="skillsLinePL">
+                <h4 data-aos="fade-right">Umiejętności programowania</h4>
+                <p  data-aos="fade-right">Podczas nauki programowania zdobyłem podstawową wiedzę z języków takich jak HTML, CSS, JS, preprocesor SASS oraz zapoznałem się z Frameworkiem Bootstrap.
+                    W trakcie studiów miałem styczność także z językiem R, Phyton, PHP oraz zrealizowałem projekt w oprogramowaniu Joomla!         </p>
+            </div>
+            <div class="skillsLine" id="skillsLineENG" style="display: none;">
+                <h4 data-aos="fade-right">Programming <br> skills</h4>
+                <p  data-aos="fade-right">While studying programming, I gained basic knowledge of languages such as HTML, CSS, JS, SASS preprocessor and I got familiar with Bootstrap framework. 
+                    During my studies I also had contact with R, Phyton, PHP and I completed a project in Joomla!          </p>
+            </div>
+            <div class="skillsFirstLine" >
+                <h4 data-aos="fade-left">HTML</h4>
+                <h4 data-aos="fade-left">CSS</h4>
+                <h4 data-aos="fade-left">SASS</h4>
+            </div> 
+            <div class="skillsSecondLine">
+                <h4 data-aos="fade-left">JS</h4>
+                <h4 data-aos="fade-left">Bootstrap</h4>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="break"></section>
+
+
+    <section id="projects">
+        <h4 class="project-top-text" data-aos="fade-down" id="projectsPL">Projekty</h4>
+        <h4 class="project-top-text" data-aos="fade-down" id="projectsENG"style="display: none;">Projects</h4>
+        <h5 id="projectsH5PL" data-aos="fade-down">W projektach nie otwierają się pliki, które są zapisane z rozszerzeniem ".php".
+            Problem występuje szczególnie w projekcie numer 1.
+        </br>Zapraszam na stronę mojego Github'a, gdzie pobrać można moje wszystkie prace.
+        </h5>
+        <h5 id="projectsH5ENG" style="display: none;" data-aos="fade-down">Files with the extension ".php" cannot be opened in projects.
+            The problem occurs especially in project number 1. <br>Feel free to visit my Github page, where you can download all my works.
+        </h5>
+        <div id="row">
+            <div class="card" data-aos="fade-up">
+                <div class="offer-col">
+                    <a href="projekty/First-Project-main/Projekt.html">
+                        <img src="img/Projekt1.png" style="width: 112%"alt="">
+                        <div class="layer">
+                            <h3 id="Project1H3PL"> DRUKARNIA </h3>
+                            <h3 style="display: none;" id="Project1H3ENG"> PRINT SHOP </h3>
+                        </div>
+                    </a>
+                </div>
+                <div id="project1PL">
+                    <h4>Projekt 1</h4>
+                    <p>Projekt stworzony w celu nauki języka PHP</p>
+                    <hr>
+                    <a href="projekty/First-Project-main/Projekt.html"><p>Kliknij, po więcej... <i class="fas fa-chevron-right"></i></p></a>
+                </div>
+                <div id="project1ENG" style="display: none;">
+                    <h4>Project 1</h4>
+                    <p>Project created to learn PHP language
+                    </p>
+                    <hr>
+                    <a href="projekty/First-Project-main/Projekt.html"><p>Click here for more...<i class="fas fa-chevron-right"></i></p></a>
+                </div>
+
+            </div>
+            <div class="card" data-aos="fade-up">
+                <div class="offer-col">
+                    <a href="projekty/Projekty/Home.html">
+                        <img src="img/Projekt2.png" alt="">
+                        <div class="layer">
+                            <h3 id="Project2H3PL">KONFIGURATOR KOMPUTERA </h3>
+                            <h3 style="display: none;" id="Project2H3ENG"> PC CONFIGURATOR </h3>
+                        </div>
+                    </a>
+                </div>
+                <div id="project2PL">
+                    <h4>Projekt 2</h4>
+                    <p>Projekt stworzony w celu sprawdzenia umiejętności w CSS</p>
+                    <hr>
+                    <a href="projekty/Projekty/Home.html"><p>Kliknij, po więcej... <i class="fas fa-chevron-right"></i></p></a>
+                </div>
+                <div id="project2ENG" style="display: none;"> 
+                    <h4>Project 2</h4>
+                    <p>A project created to test my skills in CSS</p>
+                    <hr>
+                    <a href="projekty/Projekty/Home.html"><p>Click here for more... <i class="fas fa-chevron-right"></i></p></a>
+                </div>
+            </div>
+            <div class="card" data-aos="fade-up">
+                <div class="offer-col">
+                    <a href="projekty/drukarnia/index.html">
+                        <img src="img/Projekt3.png" style="width: 104%"alt="">
+                        <div class="layer">
+                            <h3 id="Project3H3PL"> DRUKARNIA 3D </h3>
+                            <h3 style="display: none;" id="Project3H3ENG"> PRINT SHOP 3D</h3>
+                        </div>
+                    </a>
+                </div>
+                <div id="project3PL">
+                    <h4>Projekt 3</h4>
+                    <p>Projekt stworzony w celu nauki preprocesora SASS</p>
+                    <hr>
+                    <a href="projekty/drukarnia/index.html"><p>Kliknij, po więcej... <i class="fas fa-chevron-right"></i></p></a>
+                </div>
+                <div id="project3ENG" style="display: none;">
+                    <h4>Project 3</h4>
+                    <p>A project created to learn the SASS preprocessor</p>
+                    <hr>
+                    <a href="projekty/drukarnia/index.html"><p>Click here for more... <i class="fas fa-chevron-right"></i></p></a>
+                </div>
+
+            </div>
+            <div class="card" data-aos="fade-up">
+                <div class="offer-col">
+                    <a href="projekty/OnlyBootstrap/index.html">
+                        <img src="img/projekt4.png" alt="" style="width: 101%">
+                        <div class="layer">
+                            <h3 id="Project4H3PL"> LEGENDY KULTURYSTYKI </h3>
+                            <h3 style="display: none;" id="Project4H3ENG"> BODYBUILDING LEGENDS</h3>
+                        </div>
+                    </a>
+                </div>
+                <div id="project4PL">
+                    <h4>Projekt 4</h4>
+                    <p>Projekt stworzony w celu nauki Bootstrap'a</p>
+                    <hr>
+                    <a href="projekty/drukarnia/index.html"><p>Kliknij, po więcej... <i class="fas fa-chevron-right"></i></p></a>
+                </div>
+                <div id="project4ENG" style="display: none;">
+                    <h4>Project 4</h4>
+                    <p>A project created to learn Bootstrap</p>
+                    <hr>
+                    <a href="projekty/drukarnia/index.html"><p>Click here for more... <i class="fas fa-chevron-right"></i></p></a>
+                </div>
+            </div>
+        </Sdiv>
+    </section>
+
+
+    <div id="contact">
+        <div class="contactInfo">
+            <div class="contactPhone">
+                <h4 id="contactPhonePL"><i class="fas fa-mobile-alt" style="margin-right: 15px"></i>Numer Telefonu:</h4>
+                <h4 id="contactPhoneENG" style="display: none;"><i class="fas fa-mobile-alt" style="margin-right: 15px"></i>Phone number:</h4>
+                <h5>+48 535 366 296</h5>
+            </div>
+            <div class="contactMail">
+                <h4><i class="fas fa-envelope" style="margin-right: 15px"></i>Email:</h4>
+                <h5>kamilshaikha1998@gmail.com</h5>
+            </div>
+        </div>
+        <div class="contactForm">
+            <form action="https://formsubmit.co/kamilshaikha1998@gmail.com" method="POST">
+                <h2 id="formH2PL">Wyślij wiadomość</h2>
+                <h2 id="formH2ENG" style="display: none;">Send message!</h2>
+                <input type="hidden" name="_next" value="https://kamil-shaikha.com/thanks.html">
+                <input type="hidden" name="_subject" value="Nowa wiadomość ze strony!">
+                <div class="inputBox">
+                    <input type="email" name="email" required>
+                    <span>Email</span>
+                </div>
+                <div class="inputBox">
+                    <textarea required="required" name="name" id="" cols="30" rows="10"></textarea>
+                    <span id="placeholderPL">Napisz wiadomość...</span>
+                    <span id="placeholderENG" style="display: none;">Write a message...</span>
+                </div>
+                <div class="inputBox">
+                    <button type="submit" class="submitButton" id="submitPL" >Wyślij wiadomość!</button>
+                    <button type="submit" class="submitButton" id="submitENG" style="display: none;">Send message!</button>
+                </div>
+           </form>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <div class="foot">
+            <div>
+                <a href="#about"><h5 id=footerPL1>O mnie</h5></a>
+                <a href="#about"><h5 id=footerENG1 style="display: none;">About me</h5></a>
+            </div>
+            <div>
+                <a href="#skills"><h5 id=footerPL2>Umiejętności</h5></a>
+                <a href="#skills"><h5 id=footerENG2 style="display: none;">Skills</h5></a>
+            </div>
+            <div>
+                <a href="#projects"><h5 id=footerPL3>Projekty</h5></a>
+                <a href="#projects"><h5 id=footerENG3 style="display: none;">Projects</h5></a>
+            </div>
+            <div>
+                <a href="#contact"><h5 id=footerPL4>Kontakt</h5></a>
+                <a href="#contact"><h5 id=footerENG4 style="display: none;">Contact</h5></a>
+            </div>
+        </div>
+        <div class="footerSocials">
+            <a href="https://www.facebook.com/kamil.shaikha.37/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://github.com/KamilSh98"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/kamil-shaikha-b3028a228/"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <hr>
+        <h6 id="footerEndPL">Wszelkie prawa zastrzeżone &copy 2021 Twórca strony - Kamil Shaikha</h6>
+        <h6 id="footerEndENG" style="display: none;">All rights reserved &copy 2021 Site creator - Kamil Shaikha</h6>
+    </footer>
+
+
+    <script src="preopen.js"></script>
+    <script src="navigation.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="styl.js"></script>
+    <script src="language.js"></script>
+</body>
+</html>
