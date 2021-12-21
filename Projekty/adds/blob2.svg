@@ -1,0 +1,21 @@
+<svg id="visual" viewBox="0 0 960 500" width="960" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"><rect x="0" y="0" width="960" height="500" fill="#5cd6d6"></rect><g transform="translate(490.6348761234128 245.5300733999233)"><path d="M143.6 -203.2C183 -225.9 209.7 -181.2 213.3 -136.1C216.9 -91 197.5 -45.5 194.2 -1.9C190.8 41.7 203.7 83.3 199.9 128.2C196.2 173.1 175.8 221.2 139.8 218.1C103.7 214.9 51.8 160.4 8.3 146.2C-35.3 131.9 -70.7 157.7 -81.9 146.6C-93.2 135.4 -80.4 87.2 -105.5 56.6C-130.7 26 -193.8 13 -220 -15.1C-246.1 -43.2 -235.2 -86.3 -210 -116.8C-184.7 -147.2 -145.1 -165 -107.7 -143.4C-70.3 -121.8 -35.2 -60.9 8.5 -75.6C52.1 -90.2 104.2 -180.4 143.6 -203.2" fill="#3ab4b4"></path></g></svg>
+
+
+
+
+<div class="blob-content">
+                <div class="ConfigLeft">
+                            <img src="images/comp2.png" width="350px" alt="">
+                </div>
+                <div class="ConfigRight">
+                    <p class="tekstsg" style=" color:#000;">Zmodyfikuj gotowy zestaw, lub zbuduj komputer od podstaw. Oto najbardziej zaawansowane i jednocześnie najprzyjemniejsze narzędzia do konfiguracji.</p>
+                        <div class="Buttony">
+                        <a href="#">
+                        <span>Dopasuj komputer pod preferencję</span>
+                        </a>
+                        <a href="#">
+                        <span>Zbuduj komputer samodzielnie</span>
+                        </a>
+                        </div>
+            </div>
+            </div>
