@@ -1,0 +1,892 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0px;
+  border: 0px;
+  text-decoration: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: url("beanstalk.png");
+}
+
+.scrollup {
+  width: 64px;
+  height: 64px;
+  text-decoration: none;
+  background: url("img/arrow.png") no-repeat 0px 0px;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: white;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d2d2d2;
+}
+
+::-moz-selection {
+  background: blue;
+}
+
+::selection {
+  background: blue;
+}
+
+.content {
+  max-width: 1250px;
+  margin: auto;
+  padding: 0 30px;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  padding: 25px 0;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  background: url("beanstalk.png");
+  padding: 10px 0;
+  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid black;
+}
+
+.navbar .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .logo h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.navbar .logo h1 a {
+  color: black;
+}
+
+.navbar .menu-list {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.menu-list li {
+  list-style: none;
+}
+
+.menu-list li a {
+  position: relative;
+  color: black;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-left: 25px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.menu-list li a:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  background: black;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.4s linear;
+  transition: -webkit-transform 0.4s linear;
+  transition: transform 0.4s linear;
+  transition: transform 0.4s linear, -webkit-transform 0.4s linear;
+}
+
+.menu-list li a:hover:before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.icon {
+  color: black;
+  font-size: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-list .cancel-btn {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+header {
+  position: relative;
+}
+
+header #background {
+  width: 100%;
+  height: 100vh;
+}
+
+header .textHeader {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+}
+
+header .textHeader .upperH2 {
+  font-size: 3rem;
+}
+
+#positives {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#positives .positives-top-text {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+#positives .positives-bottom-text {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-left: 10px;
+  font-weight: 400;
+  width: 70%;
+  margin-top: 70px;
+}
+
+#positives #row {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#positives #row .positives-col {
+  -ms-flex-preferred-size: 19%;
+      flex-basis: 19%;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  background: #d2d2d2;
+  min-height: 220px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#positives #row .positives-col:hover {
+  -webkit-box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.8);
+          box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.8);
+}
+
+#positives #row .positives-col h3 {
+  margin: 10px 0 10px 0;
+  font-weight: 800;
+}
+
+#positives #row .positives-col h4 {
+  width: 80%;
+  margin: auto;
+  font-weight: 600;
+}
+
+#offer {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+#offer .offer-top-text {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+#offer .offer-bottom-text {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
+#offer #row {
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#offer #row .offer-col {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  border-radius: 25px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+#offer #row img {
+  width: 226%;
+  display: block;
+}
+
+#offer #row img:hover {
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+#offer #row .layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#offer #row .layer:hover {
+  background: rgba(210, 210, 210, 0.6);
+}
+
+#offer #row .layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 700;
+}
+
+#offer #row .layer h3 {
+  width: 100%;
+  font-weight: 500;
+  color: white;
+  font-size: 1.4rem;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+section.contactAll {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 600px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(210, 210, 210, 0.6)), to(#d2d2d2)), url(konakt.png);
+  background-image: linear-gradient(rgba(210, 210, 210, 0.6), #d2d2d2), url(konakt.png);
+  width: 100%;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  margin-top: 2%;
+}
+
+section.contactAll .contactInfo {
+  margin: auto;
+  width: 35%;
+  margin-left: 5%;
+}
+
+section.contactAll .contactInfo .contactPhone, section.contactAll .contactInfo .contactMail {
+  margin-bottom: 30px;
+}
+
+section.contactAll .contactInfo .contactPhone .contactText, section.contactAll .contactInfo .contactMail .contactText {
+  border: 3px solid black;
+  background: transparent;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 90px;
+  font-size: 2rem;
+  margin-right: 10px;
+  float: left;
+  position: relative;
+}
+
+section.contactAll .contactInfo .contactPhone .contactText i.fa-mobile-alt, section.contactAll .contactInfo .contactMail .contactText i.fa-mobile-alt {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 27%;
+  left: 37%;
+}
+
+section.contactAll .contactInfo .contactPhone .contactText i.fa-envelope, section.contactAll .contactInfo .contactMail .contactText i.fa-envelope {
+  font-size: 2.5rem;
+  position: absolute;
+  top: 29%;
+  left: 29%;
+}
+
+section.contactAll .contactInfo .contactPhone .contactH4Text, section.contactAll .contactInfo .contactPhone .contactH5Text, section.contactAll .contactInfo .contactPhone .contactH3Text, section.contactAll .contactInfo .contactMail .contactH4Text, section.contactAll .contactInfo .contactMail .contactH5Text, section.contactAll .contactInfo .contactMail .contactH3Text {
+  font-size: 2rem;
+  text-align: left;
+  letter-spacing: .5px;
+}
+
+section.contactAll .contactInfo .contactPhone .contactH3Text, section.contactAll .contactInfo .contactMail .contactH3Text {
+  margin-bottom: 50px;
+}
+
+section.contactAll .or {
+  margin: auto;
+  width: 5%;
+}
+
+section.contactAll .or h3 {
+  font-size: 2.4rem;
+}
+
+section.contactAll .contactForm {
+  width: 50%;
+  margin: auto;
+}
+
+section.contactAll .contactForm .contactH3Text {
+  font-size: 2rem;
+  letter-spacing: .5px;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+section.contactAll .contactForm form {
+  padding: 20px;
+  border-radius: 25px;
+  min-height: 410px;
+}
+
+section.contactAll .contactForm form input {
+  display: block;
+}
+
+section.contactAll .contactForm form input.file {
+  width: 40%;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+section.contactAll .contactForm form button {
+  display: block;
+  width: 95%;
+  border-radius: 25px;
+  margin: 0 auto;
+  height: 40px;
+  font-size: 1.2rem;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  background: transparent;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+section.contactAll .contactForm form button:hover {
+  background: #bebebe;
+}
+
+section.contactAll .contactForm form button .fa-paper-plane {
+  font-size: 1.2rem;
+  margin-left: 5px;
+}
+
+section.contactAll .contactForm form .message, section.contactAll .contactForm form .email {
+  display: block;
+  width: 95%;
+  border-radius: 25px;
+  padding: 15px;
+  margin: 0 auto;
+  border: 3px solid rgba(0, 0, 0, 0.7);
+  background: transparent;
+  font-weight: 800;
+  background: #d2d2d2;
+}
+
+section.contactAll .contactForm form .message:focus ~ label, section.contactAll .contactForm form .message:valid ~ label, section.contactAll .contactForm form .email:focus ~ label, section.contactAll .contactForm form .email:valid ~ label {
+  top: -35px;
+  font-size: 14px;
+}
+
+section.contactAll .contactForm form .email {
+  margin-bottom: 30px;
+}
+
+section.contactAll .contactForm form label {
+  height: 100%;
+  position: absolute;
+  left: 25px;
+  top: 5px;
+  padding: 10px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+section.contactAll .contactForm form label .fa-envelope, section.contactAll .contactForm form label .fa-comments {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+section.contactAll .contactForm .input {
+  position: relative;
+}
+
+footer {
+  margin-top: 2%;
+}
+
+footer .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+  margin: 0 auto;
+  width: 80%;
+}
+
+footer .footer .openingHours .footerText {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+footer .footer .openingHours .footerInfo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-left: 10px;
+  font-weight: 400;
+  text-align: left;
+}
+
+footer .footer .openingHours .footerInfo .fa-clock {
+  margin-right: 10px;
+}
+
+footer .footer .addres .footerText {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+footer .footer .addres .footerInfo {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-left: 10px;
+  font-weight: 400;
+  text-align: right;
+}
+
+footer .socials {
+  text-align: center;
+  font-size: 1.9rem;
+}
+
+footer .socials a {
+  text-decoration: none;
+  color: black;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+footer .socials a .fa-facebook-f {
+  border: 1px solid black;
+  padding: 10px 17px 10px 15px;
+}
+
+footer .socials a .fa-facebook-f:hover {
+  background: #d2d2d2;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+footer .socials a .fa-twitter {
+  border: 1px solid black;
+  padding: 10px 10px 10px 10px;
+}
+
+footer .socials a .fa-twitter:hover {
+  background: #d2d2d2;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+footer .socials a .fa-instagram {
+  border: 1px solid black;
+  padding: 10px 12px 10px 12px;
+}
+
+footer .socials a .fa-instagram:hover {
+  background: #d2d2d2;
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+footer .copyright {
+  text-align: center;
+  color: black;
+  margin: 20px 0 20px 0;
+}
+
+#sideSocials {
+  position: fixed;
+  left: -40px;
+  top: 25%;
+  max-width: 70px;
+  margin-top: 150px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  -webkit-box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, 0.4);
+}
+
+#sideSocials ul li {
+  height: 60px;
+  position: relative;
+}
+
+#sideSocials ul li:hover a span {
+  display: block;
+  padding-left: 10%;
+}
+
+#sideSocials ul li:nth-child(1) a {
+  background: #4267b2;
+}
+
+#sideSocials ul li:nth-child(2) a {
+  background: #1da1f2;
+}
+
+#sideSocials ul li:nth-child(3) a {
+  background: #C13584;
+}
+
+#sideSocials ul li a {
+  color: white;
+  display: block;
+  min-height: 100%;
+  width: 100%;
+  line-height: 60px;
+  padding-left: 60px;
+  border-top: 1px solid rgba(0, 0, 0, 0.4);
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-left: 1px solid rgba(0, 0, 0, 0.4);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+#sideSocials ul li a i.fa-facebook-f {
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  font-size: 2rem;
+}
+
+#sideSocials ul li a i.fa-twitter {
+  position: absolute;
+  top: 17px;
+  left: 15px;
+  font-size: 2rem;
+}
+
+#sideSocials ul li a i.fa-instagram {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-size: 2rem;
+}
+
+#sideSocials ul li a span {
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  display: none;
+}
+
+#sideSocials ul li a:hover {
+  z-index: 1;
+  width: 200px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 1300px) {
+  section.contactAll .contactInfo .contactPhone .contactH5Text, section.contactAll .contactInfo .contactMail .contactH5Text {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1230px) {
+  .content {
+    padding: 0 30px;
+  }
+  #row {
+    display: inline-block;
+  }
+}
+
+@media (max-width: 1050px) {
+  .content {
+    padding: 0 25px;
+  }
+  .menu-list li a {
+    font-size: 0.85rem;
+  }
+  footer .footer {
+    width: 100%;
+    display: inline-block;
+  }
+  footer .footer .openingHours {
+    margin-bottom: 20px;
+  }
+  footer .footer .openingHours .footerText {
+    text-align: center;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+  }
+  footer .footer .openingHours .footerInfo {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    font-weight: 400;
+  }
+  footer .footer .addres {
+    margin-bottom: 20px;
+  }
+  footer .footer .addres .footerText {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  footer .footer .addres .footerInfo {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    font-weight: 400;
+  }
+}
+
+@media (max-width: 1010px) {
+  section.contactAll {
+    display: block;
+    min-height: 950px;
+  }
+  section.contactAll .contactInfo {
+    width: 80vw;
+    margin: auto;
+  }
+  section.contactAll .contactInfo .contactPhone .contactH3Text, section.contactAll .contactInfo .contactMail .contactH3Text {
+    text-align: center;
+  }
+  section.contactAll .contactInfo .contactPhone .contactText, section.contactAll .contactInfo .contactMail .contactText {
+    text-align: center;
+    display: none;
+  }
+  section.contactAll .contactInfo .contactPhone .contactH4Text, section.contactAll .contactInfo .contactMail .contactH4Text {
+    text-align: center;
+  }
+  section.contactAll .contactInfo .contactPhone .contactH5Text, section.contactAll .contactInfo .contactMail .contactH5Text {
+    text-align: center;
+  }
+  section.contactAll .or {
+    width: 80%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  section.contactAll .contactForm {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    padding: 0 20px;
+  }
+  header .textHeader {
+    left: 30%;
+    margin-top: 80px;
+    text-align: center;
+  }
+  header .textHeader .upperH2 {
+    font-size: 1.5rem;
+  }
+  header img {
+    display: none;
+  }
+  #positives {
+    width: 85%;
+  }
+  #positives .positives-top-text {
+    margin-top: 120px;
+  }
+  #positives #row {
+    margin-top: 5%;
+    display: block;
+    width: 90%;
+    margin: auto;
+  }
+  #positives #row .positives-col {
+    min-height: 110px;
+  }
+}
+
+@media (max-width: 868px) {
+  body.disabled {
+    overflow: hidden;
+  }
+  .icon {
+    display: block;
+  }
+  .icon.hide {
+    display: none;
+  }
+  .navbar .menu-list {
+    position: fixed;
+    min-height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0px;
+    display: block;
+    padding: 40px 0;
+    text-align: center;
+    background: #d2d2d2;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: white;
+  }
+  .navbar.show .menu-list {
+    left: 0%;
+  }
+  .navbar .menu-list li {
+    margin-top: 45px;
+  }
+  .navbar .menu-list li a {
+    font-size: 23px;
+    margin-left: -100%;
+    -webkit-transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: black;
+  }
+  .navbar.show .menu-list li a {
+    margin-left: 0px;
+  }
+  #offer #row {
+    display: inline-block;
+  }
+  #offer #row .offer-col {
+    max-width: 400px;
+  }
+  .content {
+    padding: 0 20px;
+  }
+  header .textHeader {
+    left: 25%;
+    margin-top: 80px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 680px) {
+  #offer #row {
+    display: inline-block;
+  }
+  #offer #row .offer-col {
+    max-width: 300px;
+  }
+  .content {
+    padding: 0 20px;
+  }
+  header .textHeader {
+    left: 15%;
+    margin-top: 80px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .navbar .logo a {
+    font-size: 1.7rem;
+    padding: 0 20px;
+  }
+  header {
+    margin: 0;
+  }
+  header .textHeader {
+    display: none;
+    margin: 0;
+  }
+  footer .copyright {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+.scrollup {
+  width: 64px;
+  height: 64px;
+  text-decoration: none;
+  background: url("arrow.png") no-repeat 0px 0px;
+  position: fixed;
+  right: 50px;
+  bottom: 170px;
+}
+/*# sourceMappingURL=style.css.map */

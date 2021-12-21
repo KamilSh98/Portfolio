@@ -1,0 +1,879 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,600&family=Roboto+Mono:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap')
+@import mixins
+
+
+$black-colour: #000
+$secondary-colour: #5cca8a
+$secondary-colour-hover: rgb(75, 185, 121)
+$white-colour: #fff
+        
+body
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  text-decoration: none
+  background: url("img/repeated-square.png")
+  font-family: 'Roboto', sans-serif
+
+
+.scrollup
+	position: fixed
+	right: 25px
+	bottom: 50px
+	display: none
+
+.fa-arrow-circle-up
+    font-size: 4rem
+    color: $secondary-colour-hover
+    z-index: 2
+
+
+// Intro START
+#preopen
+	background-color: $black-colour
+	width: 100%
+	height: 100vh
+.preopen
+    top: 50%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)
+    z-index: 100
+    position: absolute
+    height: 50%
+    width: 50%
+
+
+    
+// Intro KONIEC
+
+
+
+// NAWIGACJA
+
+.content
+    max-width: 1250px
+    margin: auto
+    padding: 0 30px
+.navbar
+  position: fixed
+  width: 100%
+  z-index: 2
+  padding: 25px 0
+  transition: all 0.3s ease
+  &.sticky
+    background: linear-gradient(rgba(0,0,0,1),rgba(50,50,50,1))
+    padding: 10px 0
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1)
+    border-bottom: 1px solid $black-colour
+  .content
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .logo
+  .menu-list
+    display: inline-flex
+    
+    li
+      list-style: none
+    #languages
+      display: flex
+      .polish
+        margin-right: 5px
+        margin-top: 5px
+      .english
+        margin-left: 5px
+        margin-top: 5px
+      #check
+        position: relative
+        width: 50px
+        &::before
+          content: ''
+          position: absolute
+          width: 50px
+          height: 25px
+          background: #333
+          border-radius: 25px
+          top: -3px
+        &:checked
+          &::before
+            background: $secondary-colour
+        &::after
+          content: ''
+          position: absolute
+          width: 25px
+          height: 25px
+          background: #fff
+          border-radius: 25px
+          transition: 0.25s
+          border: 2px solid #333
+          box-sizing: border-box
+          top: -3px
+        &:checked
+          &::after
+            left: 25px
+            border: 2px solid $secondary-colour
+          
+  .aHover
+    position: relative
+    color: $white-colour
+    font-size: 1.1rem
+    font-weight: 500
+    margin-left: 25px
+    text-decoration: none
+    letter-spacing: 2px
+    text-transform: uppercase
+    padding: 5px 0
+    font-family: 'Roboto Mono', monospace
+    font-weight: 300
+    &:before
+      position: absolute
+      content: ''
+      left: 0
+      bottom: 0
+      height: 3px
+      width: 100%
+      background: $secondary-colour
+      transform: scaleX(0)
+      transform-origin: right
+      transition: transform 0.4s linear
+    &:hover
+      color: $secondary-colour
+      &:before
+        transform: scaleX(1)
+        transform-origin: left
+.icon
+  color: $white-colour
+  font-size: 2rem
+  cursor: pointer
+  display: none
+.menu-list .cancel-btn
+  position: absolute
+  right: 60px
+  top: 20px
+
+
+header
+  background: linear-gradient(rgba(0,0,0,1),rgba(255,255,255,0.2)),url(img/bg5.jpg)
+  min-height: 70vh
+  width: 100%
+  #headers
+    position: absolute
+    top: 35%
+    left: 50%
+    margin-right: -50%
+    transform: translate(-50%, -50%)
+    h1
+      color: $white-colour
+      font-size: 5rem
+      font-family: 'Montserrat', sans-serif
+      text-align: center
+      margin-bottom: 0px
+    .dataText
+      display: flex
+      justify-content: center
+      align-items: center
+      h2.animatedTextOne
+        position: relative
+        font-size: 3.5em
+        text-align: center
+        -webkit-text-stroke: 0.1vw $secondary-colour
+        &::before
+          content: attr(data-text)
+          position: absolute
+          top: 0
+          left: 0
+          width: 0
+          height: 100%
+          color: $secondary-colour
+          -webkit-text-stroke: 0.1vw $secondary-colour
+          border-right: 2px solid $secondary-colour
+          overflow: hidden
+          animation: animate1 6s linear infinite
+          background: transparnet
+
+          @keyframes animate1
+            0%, 10%, 100%
+              width: 0%
+            70%, 90%
+              width: 100%
+      h2.animatedTextTwo
+        position: relative
+        font-size: 3.5em
+        text-align: center
+        -webkit-text-stroke: 0.1vw $secondary-colour
+        margin-left: 5px
+        &::before
+          content: attr(data-text)
+          position: absolute
+          top: 0
+          left: 0
+          width: 0
+          height: 100%
+          color: $secondary-colour
+          -webkit-text-stroke: 0.1vw $secondary-colour
+          border-right: 2px solid $secondary-colour
+          overflow: hidden
+          animation: animate2 6s linear infinite
+          background: transparnet
+
+          @keyframes animate2
+            0%, 10%, 100%
+              width: 100%
+            70%, 90%
+              width: 0%
+              
+    .buttonContact
+      background: transparent
+      border: 2px solid $secondary-colour
+      margin-right: 20px
+      color: $secondary-colour
+      @include buttons
+      &:hover
+        box-shadow: 0px 0px 10px 2px $secondary-colour
+      a
+        text-decoration: none
+        color: $secondary-colour
+    .buttonCV
+      border-color: $secondary-colour
+      background: $secondary-colour
+      @include buttons
+      &:hover
+        background: $secondary-colour-hover
+        border-color: $secondary-colour-hover
+        box-shadow: 0px 0px 5px 2px $secondary-colour-hover
+      a
+        text-decoration: none
+        color: $black-colour
+
+// NAWIGACJA KONIEC
+
+
+
+//Side 
+
+#sideSocials
+  position: fixed
+  left: -40px
+  top: 25%
+  max-width: 30px
+  margin-top: 150px
+  transition: all 0.3s linear
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4)
+  ul
+    li
+      height: 60px
+      position: relative
+      &:hover
+        a
+          span
+            display: block
+            padding-left: 10%
+      &:nth-child(1)
+        a
+          background: #4267b2
+      &:nth-child(2)
+        a
+          background: #211F1F
+      &:nth-child(3)
+        a
+          background: #0a66c2
+      a
+        color: white
+        display: block
+        min-height: 100%
+        width: 100%
+        line-height: 60px
+        padding-left: 60px
+        border-top: 1px solid rgba(0, 0, 0, 0.4)
+        border-right: 1px solid rgba(0, 0, 0, 0.4)
+        border-bottom: 1px solid rgba(0,0,0,.4)
+        border-left: 1px solid rgba(0, 0, 0, 0.4)
+        transition: all .3s linear
+        border-radius: 30px
+        text-decoration: none
+        i.fa-facebook-f
+          position: absolute
+          top: 17px
+          left: 20px
+          font-size: 2rem
+        i.fa-github
+          position: absolute
+          top: 17px
+          left: 15px
+          font-size: 2rem
+        i.fa-linkedin-in
+          position: absolute
+          top: 14px
+          left: 17px
+          font-size: 2rem
+        span
+          font-weight: bold
+          letter-spacing: 1px
+          text-transform: uppercase
+          display: none
+        &:hover
+          z-index: 1
+          width: 150px
+          border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+          border-top: 1px solid rgba(0, 0, 0, 0.5)    
+          border-right: 1px solid rgba(0, 0, 0, 0.5)
+          box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3)
+
+  // side End
+
+
+#about
+  width: 90%
+  display: flex
+  margin: 0 auto
+  margin-top: 30px
+  margin-bottom: 30px
+  .aboutLeftSide
+    width: 45%
+    margin: 0 auto
+    h3
+      font-size: 3rem
+      color: $secondary-colour-hover
+      text-align: center
+      font-weight: 800
+    p
+      font-size: 1.5rem
+      text-align: justify
+  .aboutRightSide
+    width: 350px
+    height: 350px
+    border-radius: 175px
+    margin-top: 70px
+    background: url(img/portret.jpg)
+    margin-right: 150px
+
+
+// GO TO
+#goTo
+  background: linear-gradient(rgba(0,0,0,1),rgba(50,50,50,1))
+  margin-top: 30px
+  margin-bottom: 30px
+  #goToSize
+    display: flex
+    width: 80%
+    margin: 0 auto
+    justify-content: space-around
+    .goToSkills, .goToProjects, .goToContact
+      width: 25%
+      .goToBG
+        @include goToBG
+        i.fa-code, i.fa-tasks, i.fa-mail-bulk
+          @include ikonki
+      h4
+        @include goToH4
+        font-size: 1.3rem
+      p
+        @include goToH4
+        font-size: 1rem
+      a
+        text-decoration: none
+        p
+          color: $secondary-colour
+
+
+
+// GO TO end
+
+
+// Programming Skills
+
+#skills
+  width: 70%
+  margin: 0 auto
+  margin-bottom: 50px
+  margin-top: 0px
+  h4
+    font-size: 2.2rem
+    text-align: justify
+  .skillsSide
+    display: flex
+    justify-content: space-around
+    .skillsLine
+      width: 50%
+      h4
+        font-size: 3rem
+        color: $secondary-colour-hover
+        text-align: center
+        font-weight: 800
+      p
+        font-size: 1.5rem
+        text-align: justify
+    .skillsFirstLine
+      margin-top: 70px
+      display: inline-block
+      width: 15%
+      h4
+        color: $secondary-colour-hover
+        font-size: 2.5rem
+    .skillsSecondLine
+      width: 15%
+      display: inline-block
+      margin-top: 100px
+      h4
+        color: $secondary-colour-hover
+        font-size: 2.5rem
+        font-family: 'Montserrat', sans-serif
+
+
+// Programming Skills END
+
+
+#break
+  background: linear-gradient(rgba(0, 0, 0,0.4),rgba(50, 50, 50,0.5)),url("img/back.jpg")
+  height: 250px
+  width: 100%
+  background-size: cover
+  background-position: center
+  z-index: 1
+  overflow: hidden
+
+
+// PROJECTS START
+
+#projects
+  margin: auto
+  text-align: center
+  padding-top: 50px
+  padding: 30px 0 30px 0
+  .project-top-text
+    font-size: 3rem
+    color: $secondary-colour
+    text-align: center
+    font-weight: 800
+    font-family: 'Montserrat', sans-serif
+  h5
+    font-size: 1.2rem
+    width: 90%
+    margin: 0 auto
+  #row
+    width: 90%
+    margin: auto
+    margin-top: 5%
+    display: flex
+    justify-content: space-around
+    .card
+      flex-basis: 20%
+      background: linear-gradient(rgba(0,0,0,1),rgba(50,50,50,1))
+      min-height: 350px
+      border: 2px solid $black-colour
+      border-top-left-radius: 50px
+      border-top-right-radius: 50px
+      h4
+        font-size: 1.5rem
+        color: $secondary-colour-hover
+        font-weight: 700
+      p
+        width: 90%
+        margin: auto
+        font-weight: 600
+        color: $white-colour
+      hr
+        width: 60%
+      a
+        text-decoration: none
+        p
+          color: $secondary-colour-hover
+      .offer-col
+        margin-bottom: 30px
+        position: relative
+        overflow: hidden
+        border-top-left-radius: 50px
+        border-top-right-radius: 50px
+      img
+        width: 100%
+        display: block
+        &:hover
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
+      .layer
+        background: transparent
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        transition: 0.5s
+        &:hover
+          background: rgba(0, 0, 0, 0.7)
+          h3
+            bottom: 30%
+            opacity: 1
+            text-transform: uppercase
+            color: $secondary-colour
+            font-weight: 700
+        h3
+          width: 100%
+          font-weight: 500
+          color: $white-colour
+          font-size: 1.4rem
+          bottom: 0px
+          left: 50%
+          transform: translateX(-50%)
+          position: absolute
+          opacity: 0
+          transition: 0.5s
+
+// PROJECTS END
+
+
+// CONTACT START
+#contact
+  display: flex
+  margin: auto
+  align-items: center
+  justify-content: center
+  margin-top: 30px
+  background: linear-gradient(rgba(50,50,50,1),rgba(0,0,0,1))
+  padding: 40px
+  .contactInfo
+    width: 40%
+    h4
+      font-size: 2.5rem
+      text-align: center
+      color: $secondary-colour-hover
+      font-family: 'Montserrat', sans-serif
+    h5
+      font-size: 1.8rem
+      text-align: center
+      font-family: 'Montserrat', sans-serif
+      color: #f2f2f2
+  .contactForm
+    width: 60%
+    display: flex
+    flex-direction: column
+    form
+      width: 80%
+      padding: 40px
+      background: #f2f2f2
+      border-radius: 20px
+      margin: 0 auto
+      h2
+        font-size: 2.5rem
+        color: $secondary-colour
+        font-weight: 600
+        text-align: center
+      .inputBox
+        position: relative
+        width: 100%
+        margin-top: 10px
+        .submitButton
+          width: 100%
+          background-image: linear-gradient(to left, #4bb979, #43a66d, #3c9462, #358256, #2e714b, #2e714b, #2e714b, #2e714b, #358256, #3c9462, #43a66d, #4bb979)
+          color: #f2f2f2
+          border:none
+          cursor: pointer
+          padding: 10px
+          font-size: 18px
+          border-radius: 20px
+          &:hover
+            background-image: linear-gradient(to left, #255a3c, #2c6b47, #337c52, #3a8e5d, #41a069, #41a069, #41a069, #41a069, #3a8e5d, #337c52, #2c6b47, #255a3c)
+        input, textarea
+          width: 100%
+          padding: 5px 0
+          font-size: 16px
+          margin: 10px 0
+          border: none
+          border-bottom: 2px solid #333
+          outline: none
+          resize: none
+          background: #f2f2f2
+          &focus~span, &:valid~span
+            color: $secondary-colour-hover
+            font-size: 0.8rem
+            transform: translateY(-25px)
+        span
+          position: absolute
+          left: 0
+          padding: 5px 0
+          font-size: 1rem
+          margin: 10px 0
+          pointer-events: none
+          transition: 0.5s
+          color: #000
+
+// CONTACT END
+
+
+//FOOTER
+
+footer
+  width: 100%
+  margin: 0 auto
+  .foot
+    display: flex
+    width: 30%
+    justify-content: space-around
+    margin: auto
+    a
+      text-decoration: none
+      color: $black-colour
+      margin-left: 15px
+      &:hover
+        color: $secondary-colour-hover
+      h5
+        font-size: 1.1rem
+  .footerSocials
+    text-align: center
+    i
+      font-size: 32px
+      color: $black-colour
+      margin-left: 10px
+      margin-right: 10px
+      &:hover
+        color: $secondary-colour-hover
+  hr
+    width: 60%
+  h6
+    text-align: center
+    font-size: 0.8rem
+
+
+
+//FOOTER END
+
+
+
+
+
+
+
+
+
+
+  //RWD
+
+
+@media (max-width: 1400px)
+  #skills
+    width: 85%
+  #contact
+    display: block
+    .contactInfo, .contactForm
+      width: 100%
+      .contactPhone, .contactMail
+        h4, h3
+          text-align: center
+  #about
+    width: 80%
+    margin: 0 auto
+    .aboutLeftSide
+      width: 100%
+      margin: 0 auto
+      text-align: center
+    .aboutRightSide
+      display: none
+  .scrollup
+    right: -100px
+    
+  
+
+@media (max-width: 1230px)
+  .content
+    padding: 0 30px
+  #row
+    display: inline-block
+    .card
+      margin-bottom: 5%
+      padding-bottom: 5%
+
+
+  footer
+    .foot
+      width: 45%
+  #about
+    width: 90%
+    margin: 0 auto
+    .aboutLeftSide
+    .aboutRightSide
+      width: 45%
+      margin-left: 150px
+
+      
+@media (max-width: 1050px)
+  .content
+    padding: 0 25px
+  .menu-list li
+    a
+      font-size: 0.85rem
+
+@media (max-width: 1220px)
+  #skills
+    width: 90%
+  body.disabled
+    overflow: hidden
+  .icon
+    display: block
+    &.hide
+      display: none
+  .navbar
+    .menu-list
+      position: fixed
+      min-height: 90%
+      width: 100%
+      left: -100%
+      top: 0px
+      display: block
+      padding: 40px 0
+      text-align: center
+      background: linear-gradient(rgba(109, 219, 154,1),rgba(0,0,0,1))
+      transition: all 0.3s ease
+      color: $white-colour
+    &.show .menu-list
+      left: 0%        
+    .menu-list li
+      margin-top: 45px
+    .menu-list 
+      a
+        font-size: 23px
+        margin-left: -100%
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+        color: $black-colour
+        &:hover
+          border-color: $black-colour
+    &.show .menu-list li a
+      margin-left: 0px
+  
+  #projects
+    #row
+      display: block
+      &:nth-child(1)
+        display: none
+
+  #languages
+    margin-top: 2%
+    justify-content: center
+
+
+          
+
+
+@media (max-width: 1000px)
+  #sideSocials
+    position: absolute
+    top: 38%
+
+
+  #skills
+    margin-bottom: 60px
+    .skillsSide
+      display: block
+      .skillsLine
+        width: 90%
+        margin: 0 auto
+      .skillsFirstLine, .skillsSecondLine
+        display: none
+
+@media (max-width: 900px)
+  .content
+    padding: 0 20px
+  footer
+    .foot
+      width: 55%
+@media (max-width: 760px)
+  header
+    min-height: 60vh
+    #headers
+      display: block
+      h1
+        font-size: 3.5rem
+      .dataText
+        h2.animatedTextOne, h2.animatedTextTwo
+          color: $secondary-colour
+          font-size: 2.5rem
+          &::before
+            display: none
+  #goTo
+    width: 100%
+    #goToSize
+      display: block
+      padding: 30px 0 30px 0
+      .goToSkills, .goToProjects, .goToContact
+        width: 90%
+        margin: auto
+        h4
+          font-size: 1.7rem
+        p
+          font-size: 1.4rem
+  footer
+    .foot
+      width: 65%
+  header
+    #headers
+      .buttonCV, .buttonContact
+        display: block
+        text-align: center
+        margin: 0 auto
+        margin-bottom: 20px
+  #contact
+    .contactInfo, .contactForm
+      .contactPhone, .contactMail
+        h5
+          font-size: 1.4rem
+
+
+@media (max-width: 570px)
+  #skills
+    h4
+    .skillsSide
+      .skillsLine
+        h4
+          font-size: 2.1rem
+  #contact
+    .contactInfo, .contactForm
+      .contactPhone, .contactMail
+        h5
+          font-size: 1.2rem
+  footer
+    .foot
+      width: 85%
+  #sideSocials
+    display: none
+  header
+    height: 60vh
+    #headers
+      h1
+        display: none
+    .dataText
+      h2.animatedTextOne, h2.animatedTextTwo
+        font-size: 1.5rem
+  .navbar
+    .content
+      .logo
+        a
+          margin: 0 auto
+          img
+            width: 220px
+
+@media (max-width: 460px)
+  header
+    #headers
+      .dataText
+        h2.animatedTextOne, h2.animatedTextTwo
+          font-size: 2rem
+    
+        
+@media (max-width: 380px)
+  .navbar .logo a
+    font-size: 1.7rem
+    .content
+    padding: 0 20px
+  #contact
+    .contactInfo, .contactForm
+      .contactPhone, .contactMail
+        h5
+          font-size: 1.1rem
+  footer
+    .foot
+      width: 100%
+  #about
+    width: 95%
+  header
+    #headers
+      .dataText
+        h2.animatedTextOne, h2.animatedTextTwo
+          font-size: 1.8rem

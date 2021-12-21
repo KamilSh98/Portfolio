@@ -1,0 +1,698 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap')
+@import mixins
+    
+$primary-color: rgb(210, 210, 210)
+$white-color: rgb(255, 255, 255)
+$black-color: rgb(0, 0, 0)
+        
+*
+    margin: 0px
+    border: 0px
+    text-decoration: none
+    list-style: none
+    box-sizing: border-box
+    font-family: 'Poppins', sans-serif
+
+body   
+  background: url("beanstalk.png")
+
+.scrollup
+  width:86px
+	height:64px
+	text-decoration: none
+	background: url("img/arrow.png") no-repeat 0px 0px
+	position: fixed
+	right: 50px
+	bottom: 210px
+	display: none
+
+// NAWIGACJA
+
+::-webkit-scrollbar
+    width: 10px
+::-webkit-scrollbar-track
+    background: $white-color
+::-webkit-scrollbar-thumb
+    background: $primary-color
+::selection
+    background: blue
+.content
+    max-width: 1250px
+    margin: auto
+    padding: 0 30px
+.navbar
+  position: fixed
+  width: 100%
+  z-index: 2
+  padding: 25px 0
+  transition: all 0.3s ease
+  &.sticky
+    background: url("beanstalk.png")
+    padding: 10px 0
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1)
+    border-bottom: 1px solid $black-color
+  .content
+    display: flex
+    align-items: center
+    justify-content: space-between
+  .logo
+    h1
+      font-size: 1.9rem
+      font-weight: 700
+      text-decoration: none
+      letter-spacing: 2px
+      a
+        color: $black-color
+  .menu-list
+    display: inline-flex
+.menu-list li
+  list-style: none
+  a
+    position: relative
+    color: $black-color
+    font-size: 1.1rem
+    font-weight: 500
+    margin-left: 25px
+    text-decoration: none
+    letter-spacing: 2px
+    text-transform: uppercase
+    font-weight: bold
+    padding: 5px 0
+    &:before
+      position: absolute
+      content: ''
+      left: 0
+      bottom: 0
+      height: 3px
+      width: 100%
+      background: $black-color
+      transform: scaleX(0)
+      transform-origin: right
+      transition: transform 0.4s linear
+    &:hover
+      &:before
+        transform: scaleX(1)
+        transform-origin: left
+
+
+      
+
+
+.icon
+  color: $black-color
+  font-size: 2rem
+  cursor: pointer
+  display: none
+
+.menu-list .cancel-btn
+  position: absolute
+  right: 30px
+  top: 20px
+
+
+// NAWIGACJA KONIEC
+
+header
+  position: relative
+  #background
+    width: 100%
+    height: 100vh
+  .textHeader
+    position: absolute
+    top: 20%
+    left: 10%
+    .upperH2
+      font-size: 3rem
+
+
+
+
+
+
+
+
+
+
+#positives
+  width: 90%
+  margin: auto
+  text-align: center
+  padding-top: 50px
+  .positives-top-text
+    @include biggerText
+  .positives-bottom-text
+    @include smallerText
+    width: 70%
+    margin-top: 70px
+  #row
+    margin-top: 5%
+    display: flex
+    justify-content: space-between
+    .positives-col
+      flex-basis: 19%
+      border-radius: 25px
+      margin-bottom: 30px
+      overflow: hidden
+      background: #d2d2d2
+      min-height: 220px
+      transition: 0.5s
+      &:hover
+        box-shadow: 0 0 20px 0 rgba(50, 50, 50, 0.8)
+      h3
+        margin: 10px 0 10px 0
+        font-weight: 800
+      h4
+        width: 80%
+        margin: auto
+        font-weight: 600
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//boxy
+#offer
+  width: 80%
+  margin: auto
+  text-align: center
+  padding-top: 50px
+  .offer-top-text
+    @include biggerText
+  .offer-bottom-text
+    @include smallerText
+  #row
+    margin-top: 5%
+    display: flex
+    justify-content: space-between
+    .offer-col
+      flex-basis: 30%
+      border-radius: 25px
+      margin-bottom: 30px
+      position: relative
+      overflow: hidden
+    img
+      width: 226%
+      display: block
+      &:hover
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2)
+    .layer
+      background: transparent
+      height: 100%
+      width: 100%
+      position: absolute
+      top: 0
+      left: 0
+      transition: 0.5s
+      &:hover
+        background: rgba(210, 210, 210, 0.6)
+        h3
+          bottom: 49%
+          opacity: 1
+          text-transform: uppercase
+          color: #000
+          font-weight: 700
+      h3
+        width: 100%
+        font-weight: 500
+        color: $white-color
+        font-size: 1.4rem
+        bottom: 0px
+        left: 50%
+        transform: translateX(-50%)
+        position: absolute
+        opacity: 0
+        transition: 0.5s
+
+
+//
+
+
+
+
+
+
+
+
+
+
+
+// KONTAKT
+
+
+
+
+
+section.contactAll
+  display: flex
+  min-height: 600px
+  background-image: linear-gradient(rgba(210,210,210,0.6), $primary-color), url(konakt.png)
+  width: 100%
+  background-position: center
+  background-size: cover
+  background-attachment: fixed
+  position: relative
+  margin-top: 2%
+  .contactInfo
+    margin: auto
+    width: 35%
+    margin-left: 5%
+    .contactPhone, .contactMail
+      margin-bottom: 30px
+      .contactText
+        border: 3px solid $black-color
+        background: transparent
+        width: 100px
+        height: 100px
+        padding: 20px
+        border-radius: 90px
+        font-size: 2rem
+        margin-right: 10px
+        float: left
+        position: relative
+        i.fa-mobile-alt
+          font-size: 2.5rem
+          position: absolute
+          top: 27%
+          left: 37%
+        i.fa-envelope
+          font-size: 2.5rem
+          position: absolute
+          top: 29%
+          left: 29%
+      .contactH4Text, .contactH5Text, .contactH3Text
+        font-size: 2rem
+        text-align: left
+        letter-spacing: .5px
+      .contactH3Text
+        margin-bottom: 50px
+        
+  .or
+    margin: auto
+    width: 5%
+    h3
+      font-size: 2.4rem
+  .contactForm
+    width: 50%
+    margin: auto
+    .contactH3Text
+      font-size: 2rem
+      letter-spacing: .5px
+      text-align: center
+      font-weight: 700
+      margin-bottom: 20px
+    form
+      padding: 20px
+      border-radius: 25px
+      min-height: 410px
+      input
+        display: block
+        &.file
+          width: 40%
+          padding: 15px
+          margin: 0 auto
+      button
+        display: block
+        width: 95%
+        border-radius: 25px
+        margin: 0 auto
+        height: 40px
+        font-size: 1.2rem
+        @include formStyle
+        cursor: pointer
+        &:hover
+          background: rgb(190, 190, 190) 
+        .fa-paper-plane
+          font-size: 1.2rem
+          margin-left: 5px
+      .message, .email
+        display: block
+        width: 95%
+        border-radius: 25px
+        padding: 15px
+        margin: 0 auto
+        @include formStyle
+        &:focus, &:valid
+          &~label
+            top: -35px
+            font-size: 14px  
+        background: $primary-color
+      .email
+        margin-bottom: 30px
+      label
+        height: 100%
+        position: absolute
+        left: 25px
+        top: 5px
+        padding: 10px
+        transition: 0.2s
+        .fa-envelope, .fa-comments
+          font-size: 14px
+          margin-right: 5px
+    .input
+      position: relative
+
+
+
+
+
+
+
+
+
+
+footer
+  margin-top: 2%
+  .footer
+    display: flex
+    justify-content: space-between
+    justify-items: center
+    margin: 0 auto
+    width: 80%
+    .openingHours
+      .footerText
+        @include biggerText
+        text-align: left
+      .footerInfo
+        @include smallerText
+        text-align: left
+        .fa-clock
+          margin-right: 10px
+    .addres
+      .footerText
+        @include biggerText
+        text-align: right
+      .footerInfo
+        @include smallerText
+        text-align: right
+  .socials
+    text-align: center
+    font-size: 1.9rem
+    a
+      text-decoration: none
+      color: $black-color
+      transition: 0.5s
+      .fa-facebook-f
+        @include socials
+        padding: 10px 17px 10px 15px
+        &:hover
+          @include socialsHover
+      .fa-twitter
+        @include socials
+        padding: 10px 10px 10px 10px
+        &:hover
+          @include socialsHover
+      .fa-instagram
+        @include socials
+        padding: 10px 12px 10px 12px
+        &:hover
+          @include socialsHover
+
+  .copyright
+    text-align: center
+    color: $black-color
+    margin: 20px 0 20px 0
+            
+
+
+
+
+
+
+
+#sideSocials
+  position: fixed
+  left: -40px
+  top: 25%
+  max-width: 70px
+  margin-top: 150px
+  transition: all 0.3s linear
+  box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4)
+  ul
+    li
+      height: 60px
+      position: relative
+      &:hover
+        a
+          span
+            display: block
+            padding-left: 10%
+      &:nth-child(1)
+        a
+          background: #4267b2
+      &:nth-child(2)
+        a
+          background: #1da1f2
+      &:nth-child(3)
+        a
+          background: #C13584
+      a
+        color: white
+        display: block
+        min-height: 100%
+        width: 100%
+        line-height: 60px
+        padding-left: 60px
+        border-top: 1px solid rgba(0, 0, 0, 0.4)
+        border-right: 1px solid rgba(0, 0, 0, 0.4)
+        border-bottom: 1px solid rgba(0,0,0,.4)
+        border-left: 1px solid rgba(0, 0, 0, 0.4)
+        transition: all .3s linear
+        i.fa-facebook-f
+          position: absolute
+          top: 17px
+          left: 20px
+          font-size: 2rem
+        i.fa-twitter
+          position: absolute
+          top: 17px
+          left: 15px
+          font-size: 2rem
+        i.fa-instagram
+          position: absolute
+          top: 14px
+          left: 14px
+          font-size: 2rem
+        span
+          font-weight: bold
+          letter-spacing: 1px
+          text-transform: uppercase
+          display: none
+        &:hover
+          z-index: 1
+          width: 200px
+          border-bottom: 1px solid rgba(0, 0, 0, 0.5)
+          border-top: 1px solid rgba(0, 0, 0, 0.5)    
+          border-right: 1px solid rgba(0, 0, 0, 0.5)
+          box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3)
+      
+
+
+
+
+
+
+
+
+
+//RWD 
+
+@media (max-width: 1300px)
+  section.contactAll
+    .contactInfo
+      .contactPhone, .contactMail
+        .contactH5Text
+          font-size: 1.5rem
+
+
+
+@media (max-width: 1230px)
+  .content
+    padding: 0 30px
+  #row
+    display: inline-block
+
+      
+
+@media (max-width: 1050px)
+  .content
+    padding: 0 25px
+  .menu-list li
+    a
+      font-size: 0.85rem
+  footer
+    .footer
+      width: 100%
+      display: inline-block
+      .openingHours
+        margin-bottom: 20px
+        .footerText
+          text-align: center
+          @include biggerTextOnMoblie
+        .footerInfo
+          @include smallerTextOnMoblie
+      .addres
+        margin-bottom: 20px
+        .footerText
+          @include biggerTextOnMoblie
+          text-align: center
+        .footerInfo
+          @include smallerTextOnMoblie
+          
+
+@media (max-width: 1010px)
+  section.contactAll
+    display: block
+    min-height: 950px
+    .contactInfo
+      width: 80vw
+      margin: auto
+      .contactPhone, .contactMail
+        .contactH3Text
+          text-align: center
+        .contactText
+          text-align: center
+          display: none
+        .contactH4Text
+          text-align: center
+        .contactH5Text
+          text-align: center
+    .or
+      width: 80%
+      text-align: center
+      margin-bottom: 20px
+    .contactForm
+      width: 100%
+
+
+@media (max-width: 900px)
+  .content
+    padding: 0 20px
+  header
+    .textHeader
+      left: 30%
+      margin-top: 80px
+      text-align: center
+      .upperH2
+        font-size: 1.5rem
+    img
+      display: none
+  #positives
+    width: 85%
+    .positives-top-text
+      margin-top: 120px
+    #row
+      margin-top: 5%
+      display: block
+      width: 90%
+      margin: auto
+      .positives-col
+        min-height: 110px
+          
+
+
+@media (max-width: 868px)
+  body.disabled
+    overflow: hidden
+  .icon
+    display: block
+    &.hide
+      display: none
+  .navbar
+    .menu-list
+      position: fixed
+      min-height: 100vh
+      width: 100%
+      left: -100%
+      top: 0px
+      display: block
+      padding: 40px 0
+      text-align: center
+      background: $primary-color
+      transition: all 0.3s ease
+      color: $white-color
+    &.show .menu-list
+      left: 0%
+    .menu-list li
+      margin-top: 45px
+      a
+        font-size: 23px
+        margin-left: -100%
+        transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+        color: $black-color
+    &.show .menu-list li a
+      margin-left: 0px
+  #offer
+    #row
+      display: inline-block
+      .offer-col
+        max-width: 400px
+  .content
+    padding: 0 20px
+  header
+    .textHeader
+      left: 25%
+      margin-top: 80px
+      text-align: center
+
+@media (max-width: 680px)
+  #offer
+    #row
+      display: inline-block
+      .offer-col
+        max-width: 300px
+  .content
+    padding: 0 20px
+  header
+    .textHeader
+      left: 15%
+      margin-top: 80px
+      text-align: center
+
+@media (max-width: 380px)
+  .navbar .logo a
+    font-size: 1.7rem
+    .content
+    padding: 0 20px
+  header
+    margin: 0
+    .textHeader
+      display: none
+      margin: 0
+  footer
+    .copyright
+      width: 80%
+      margin: auto
+      margin-top: 20px
+      
+
+
+
+
+
+
+.scrollup
+  width: 64px
+  height: 64px
+  text-decoration: none
+  background: url("arrow.png") no-repeat 0px 0px
+  position: fixed
+  right: 50px
+  bottom: 170px
