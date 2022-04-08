@@ -610,15 +610,84 @@ header #headers .buttonCV a {
   font-family: 'Montserrat', sans-serif;
 }
 
-#break {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(50, 50, 50, 0.5))), url("img/back.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(50, 50, 50, 0.5)), url("img/back.jpg");
-  height: 250px;
+#education {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.9)), to(rgba(50, 50, 50, 0.9))), url("img/back.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(50, 50, 50, 0.9)), url("img/back.jpg");
   width: 100%;
+  min-height: 500px;
   background-size: cover;
   background-position: center;
   z-index: 1;
   overflow: hidden;
+}
+
+#education .education-top-text {
+  font-size: 3rem;
+  color: #5cca8a;
+  text-align: center;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#education .education-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#education .education-all .education-left {
+  width: calc((100%/10)*4.5);
+  text-align: right;
+}
+
+#education .education-all .education-left p {
+  color: #5cca8a;
+}
+
+#education .education-all .education-middle {
+  position: relative;
+  width: calc((100%/10));
+}
+
+#education .education-all .education-middle .dot1 {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #5cca8a;
+  border: 1px solid #4bb979;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+#education .education-all .education-middle .dot2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #5cca8a;
+  border: 1px solid #4bb979;
+  position: absolute;
+  top: 120%;
+  left: 50%;
+}
+
+#education .education-all .education-middle .line {
+  width: 1px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #5cca8a;
+  border: 1px solid #4bb979;
+  position: absolute;
+  top: 20%;
+  left: 55%;
+}
+
+#education .education-all .education-right {
+  width: calc((100%/10)*4.5);
+}
+
+#education .education-all .education-right p {
+  color: #5cca8a;
 }
 
 #projects {

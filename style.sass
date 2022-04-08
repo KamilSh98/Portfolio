@@ -424,14 +424,61 @@ header
 // Programming Skills END
 
 
-#break
-  background: linear-gradient(rgba(0, 0, 0,0.4),rgba(50, 50, 50,0.5)),url("img/back.jpg")
-  height: 250px
+#education
+  background: linear-gradient(rgba(0, 0, 0,0.9),rgba(50, 50, 50,0.9)),url("img/back.jpg")
   width: 100%
+  min-height: 500px
   background-size: cover
   background-position: center
   z-index: 1
   overflow: hidden
+  .education-top-text
+    font-size: 3rem
+    color: $secondary-colour
+    text-align: center
+    font-weight: 800
+    font-family: 'Montserrat', sans-serif
+  .education-all
+    display: flex
+    .education-left
+      width: calc((100%/10)*4.5)
+      text-align: right
+      p
+        color: $secondary-colour
+    .education-middle
+      position: relative
+      width: calc((100%/10))
+      .dot1
+        width: 20px
+        height: 20px
+        border-radius: 10px
+        background-color: $secondary-colour
+        border: 1px solid $secondary-colour-hover
+        position: absolute
+        top: 20%
+        left: 50%
+      .dot2
+        width: 20px
+        height: 20px
+        border-radius: 10px
+        background-color: $secondary-colour
+        border: 1px solid $secondary-colour-hover
+        position: absolute
+        top: 120%
+        left: 50%
+      .line
+        width: 1px
+        height: 120px
+        border-radius: 10px
+        background-color: $secondary-colour
+        border: 1px solid $secondary-colour-hover
+        position: absolute
+        top: 20%
+        left: 55%
+    .education-right
+      width: calc((100%/10)*4.5)
+      p
+        color: $secondary-colour
 
 
 // PROJECTS START
