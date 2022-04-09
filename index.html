@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="jquery.scrollTo.min.js"></script>
+    <script src="https://kit.fontawesome.com/20ce087b13.js" crossorigin="anonymous"></script>
     <script>
 		
 		jQuery(function($)
@@ -41,7 +42,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" style="z-index: 5">
             <div class="content">
                 <div class="logo">
                     <a href="index.html"><img src="img/logo.png"></a>
@@ -197,19 +198,39 @@
     <section id="education">
         <h4 class="education-top-text" data-aos="fade-down">- Edukacja -</h4>
         <div class="education-all">
-            <div class="education-left">
-                <p>Technikum nr 2 w Rzeszowie</p>
-                <p>Kierunek: Technik ekonomista</p>
+            <div class="education-left" data-aos="fade-left">
+                <div class="education-place">
+                    <p style="font-weight: 800">Technikum nr 2 w Rzeszowie</p>
+                    <p>Kierunek: Technik ekonomista</p>
+                    <div class="more-all">
+                        <p id="more-left" >Kliknij, po więcej... <i class="fas fa-chevron-down"></i>
+                        <ul id="more-list">
+                            <li style="color: #5cca8a">A.35. Planowanie i prowadzenie działalności w organizacji - 2017r</li>
+                            <li style="color: #5cca8a">Kurs uproszczonych form rachunkowości - 2017r</li>
+                            <li style="color: #5cca8a">A.36. Prowadzenie rachunkowości - 2018r</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="education-year"><- 2014 - 2018 </div>
             </div>
             <div class="education-middle">
                 <div class="dot1"></div>
                 <div class="dot2"></div>
                 <div class="line"></div>
             </div>
-            <div class="education-right">
-                <p>Politechnika Rzeszowska im. Ignacego Łukasiewicza</p>
-                <p>Kierunek: Zarządzanie i inżynieria produkcji</p>
-                <p>Specjalność: Informatyka w zarządzaniu przedsiębiortwem</p>
+            <div class="education-right" data-aos="fade-right">
+                <div class="education-year">2018 - obecnie -></div>
+                <div class="education-place">
+                    <p style="font-weight: 800">Politechnika Rzeszowska im. Ignacego Łukasiewicza</p>
+                    <p>Kierunek: Zarządzanie i inżynieria produkcji</p>
+                    <p>Specjalność: Informatyka w zarządzaniu przedsiębiortwem</p>
+                    <div class="more-all">
+                        <p id="more-right" >Kliknij, po więcej... <i class="fas fa-chevron-down"></i>
+                        <ul id="more-list-right">
+                            <li style="color: #5cca8a">Uzyskanie tytułu inżyniera - 2022r </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -400,5 +421,6 @@
     </script>
     <script src="styl.js"></script>
     <script src="language.js"></script>
+    <script src="education-more-list.js"></script>
 </body>
 </html>

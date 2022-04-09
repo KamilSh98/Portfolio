@@ -638,10 +638,30 @@ header #headers .buttonCV a {
 #education .education-all .education-left {
   width: calc((100%/10)*4.5);
   text-align: right;
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  text-align: left;
 }
 
-#education .education-all .education-left p {
+#education .education-all .education-left .education-year {
   color: #5cca8a;
+  font-weight: 800;
+  margin-left: 10px;
+}
+
+#education .education-all .education-left .education-place p {
+  color: #5cca8a;
+  margin: 0;
+}
+
+#education .education-all .education-left .education-place .more-all #more-left {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #education .education-all .education-middle {
@@ -656,8 +676,9 @@ header #headers .buttonCV a {
   background-color: #5cca8a;
   border: 1px solid #4bb979;
   position: absolute;
-  top: 20%;
+  top: 30px;
   left: 50%;
+  z-index: 2;
 }
 
 #education .education-all .education-middle .dot2 {
@@ -667,8 +688,9 @@ header #headers .buttonCV a {
   background-color: #5cca8a;
   border: 1px solid #4bb979;
   position: absolute;
-  top: 120%;
+  top: 145px;
   left: 50%;
+  z-index: 2;
 }
 
 #education .education-all .education-middle .line {
@@ -678,16 +700,33 @@ header #headers .buttonCV a {
   background-color: #5cca8a;
   border: 1px solid #4bb979;
   position: absolute;
-  top: 20%;
+  top: 30px;
   left: 55%;
+  z-index: 1;
 }
 
 #education .education-all .education-right {
   width: calc((100%/10)*4.5);
+  margin-top: 145px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-#education .education-all .education-right p {
+#education .education-all .education-right .education-year {
   color: #5cca8a;
+  margin-right: 10px;
+  font-weight: 800;
+}
+
+#education .education-all .education-right .education-place p {
+  color: #5cca8a;
+  margin: 0;
+}
+
+#education .education-all .education-right .education-place .more-all #more-right {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 #projects {

@@ -443,8 +443,22 @@ header
     .education-left
       width: calc((100%/10)*4.5)
       text-align: right
-      p
+      margin-top: 30px
+      display: flex
+      justify-content: right
+      text-align: left
+      .education-year
         color: $secondary-colour
+        font-weight: 800
+        margin-left: 10px
+      .education-place
+        p
+          color: $secondary-colour
+          margin: 0
+        .more-all
+          #more-left
+            cursor: pointer
+            text-decoration: underline
     .education-middle
       position: relative
       width: calc((100%/10))
@@ -455,8 +469,9 @@ header
         background-color: $secondary-colour
         border: 1px solid $secondary-colour-hover
         position: absolute
-        top: 20%
+        top: 30px
         left: 50%
+        z-index: 2
       .dot2
         width: 20px
         height: 20px
@@ -464,8 +479,9 @@ header
         background-color: $secondary-colour
         border: 1px solid $secondary-colour-hover
         position: absolute
-        top: 120%
+        top: 145px
         left: 50%
+        z-index: 2
       .line
         width: 1px
         height: 120px
@@ -473,12 +489,25 @@ header
         background-color: $secondary-colour
         border: 1px solid $secondary-colour-hover
         position: absolute
-        top: 20%
+        top: 30px
         left: 55%
+        z-index: 1
     .education-right
       width: calc((100%/10)*4.5)
-      p
+      margin-top: 145px
+      display: flex
+      .education-year
         color: $secondary-colour
+        margin-right: 10px
+        font-weight: 800
+      .education-place
+        p
+          color: $secondary-colour
+          margin: 0
+        .more-all
+          #more-right
+            cursor: pointer
+            text-decoration: underline
 
 
 // PROJECTS START
