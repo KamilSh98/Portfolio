@@ -1,8 +1,8 @@
-				Info:
+									Info:
 
 A repository created to collect files that make up the portfolio on the website: https://kamilshaikha.netlify.app/
 																				
-				Technology used:
+									Technology used:
 
 JavaScript
 57.9%
